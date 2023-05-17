@@ -1,6 +1,6 @@
 #include"Produce.h"
 
-//ด๚ธี
+//test
 int main() {
 	Produce a;
 	a.print_board();
@@ -12,4 +12,3 @@ int main() {
 	}
 }
 
-//git test
