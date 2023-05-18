@@ -12,7 +12,6 @@ class Produce
 public:
 	int board[4][4];
 	Produce();//初始化遊戲面板
-	void setBoard();
 	void generate_random_tile();//隨機產生方塊
 	void print_board();//印出初始畫面、更新後畫面
 };

@@ -22,8 +22,6 @@ Produce::Produce()
 	}
 }
 
-void Produce::setBoard() {
-}
 void Produce::generate_random_tile()
 {
 	srand(time(0));
