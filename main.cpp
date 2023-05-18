@@ -4,7 +4,7 @@
 int main() {
 	Produce a;
 	a.print_board();
-	//cout << endl;
+	cout << endl;
 	for (int i = 0;i < 5;i++) {
 		a.generate_random_tile();
 		a.print_board();
@@ -12,4 +12,3 @@ int main() {
 	}
 }
 
-//test

@@ -8,10 +8,9 @@ using namespace std;
 #define R_H
 
 class Produce
-{
-private:
-	int board[4][4];
+{	
 public:
+	int board[4][4];
 	Produce();//初始化遊戲面板
 	void setBoard();
 	void generate_random_tile();//隨機產生方塊
