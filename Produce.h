@@ -8,7 +8,7 @@ using namespace std;
 #define R_H
 
 class Produce
-{	
+{
 public:
 	int board[4][4];
 	Produce();//初始化遊戲面板
@@ -17,4 +17,3 @@ public:
 };
 
 #endif
-

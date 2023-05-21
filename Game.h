@@ -1,16 +1,13 @@
 #ifndef GAME_H
 #define GAME_H
 #include<iostream>
-//#include"Produce.h"
+#include"Produce.h"
 using namespace std;
 
 class Game
 {
 private:
-	int board[4][4];
-	void print_board();
-	//void initialize_board();
-	void generate_random_tile();
+	//int **board;
 	void shiftLeft();
 	void mergeLeft();
 	void moveLeft();
@@ -25,7 +22,8 @@ private:
 	void moveDown();
 	bool isGameOver();
 public:
-	Game();
+	Produce A;
+	Game(Produce);
 	void play();
 };
 #endif

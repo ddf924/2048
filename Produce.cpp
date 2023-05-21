@@ -2,14 +2,14 @@
 
 Produce::Produce()
 {
-	srand(time(0)); 
+	//srand(time(0));
 	for (int i = 0;i < 4;i++) {
 		for (int j = 0;j < 4;j++) {
 			board[i][j] = 0;
 		}
 	}
-	int place1 = (rand()%16);
-	int place2=place1;
+	int place1 = (rand() % 16);
+	int place2 = place1;
 	while (place1 == place2) place2 = (rand() % 16);
 	int count = 0;
 	for (int i = 0;i < 4;i++) {
@@ -24,7 +24,7 @@ Produce::Produce()
 
 void Produce::generate_random_tile()
 {
-	srand(time(0));
+	//srand(time(0));
 	int amount = (rand() % 2 + 1);
 	int empty = 0;
 	int place[2];
@@ -36,12 +36,12 @@ void Produce::generate_random_tile()
 	}
 	if (amount == 1) {
 		place[0] = -1;
-		place[1] = (rand() % empty );
+		place[1] = (rand() % empty);
 	}
 	else {
-		place[0] = (rand() % empty );
+		place[0] = (rand() % empty);
 		place[1] = place[0];
-		while (place[0] == place[1]) place[1] = (rand() % empty );
+		while (place[0] == place[1]) place[1] = (rand() % empty);
 	}
 	int count = 0;
 	for (int i = 0;i < 4;i++) {
@@ -59,11 +59,14 @@ void Produce::generate_random_tile()
 
 void Produce::print_board()
 {
-	for (int i = 0;i < 4;i++) {
-		for (int j = 0;j < 4;j++) {
-			cout << board[i][j];
+
+	cout << "\n2048\n";
+	cout << "-----------------------------\n";
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			cout << "| " << setw(4) << board[i][j] << " ";
 		}
-		cout << endl;
+		cout << "|\n";
+		cout << "-----------------------------\n";
 	}
 }
-	
