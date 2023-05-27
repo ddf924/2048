@@ -15,16 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="testProduce.cpp">
-      <Filter>來源檔案</Filter>
-    </ClCompile>
     <ClCompile Include="Produce.cpp">
       <Filter>來源檔案</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
-      <Filter>來源檔案</Filter>
-    </ClCompile>
-    <ClCompile Include="testGame.cpp">
       <Filter>來源檔案</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">

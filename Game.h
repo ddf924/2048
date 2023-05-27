@@ -7,7 +7,6 @@ using namespace std;
 class Game
 {
 private:
-	//int **board;
 	void shiftLeft();
 	void mergeLeft();
 	void moveLeft();
@@ -20,10 +19,11 @@ private:
 	void shiftDown();
 	void mergeDown();
 	void moveDown();
-	bool isGameOver();
+
 public:
 	Produce A;
 	Game(Produce);
 	void play();
+	bool isGameOver();
 };
 #endif

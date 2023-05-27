@@ -6,6 +6,25 @@ Game::Game(Produce A) {
 	this->A = A;
 }
 void Game::play() {
+	char ch;
+	for (;;) {
+		cout << "-----------------------------\n";
+
+		for (int i = 0;i < 7;i++) {
+			if (i == 3)
+				cout << "|          遊戲開始         |\n";
+			else if (i == 4)
+				cout << "|       （按空格繼續）      |\n";
+			else
+				cout << "|                           |\n";
+		}
+		cout << "-----------------------------\n";
+		ch = getchar();
+		if (ch == ' ')
+			break;
+	}
+
+
 	while (!isGameOver()) {
 
 		A.print_board();
@@ -29,6 +48,19 @@ void Game::play() {
 		}
 		A.generate_random_tile();
 	}
+	if (isGameOver() == true) {
+		cout << "-----------------------------\n";
+
+		for (int i = 0;i < 7;i++) {
+			if (i == 4)
+				cout << "|          遊戲結束          |\n";
+			else
+				cout << "|                            |\n";
+		}
+		cout << "-----------------------------\n";
+	}
+
+
 }
 /*void Game::print_board() {
 	cout << "\n2048\n";

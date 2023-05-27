@@ -2,7 +2,7 @@
 
 Produce::Produce()
 {
-	//srand(time(0));
+	srand(time(0));
 	for (int i = 0;i < 4;i++) {
 		for (int j = 0;j < 4;j++) {
 			board[i][j] = 0;
@@ -24,7 +24,7 @@ Produce::Produce()
 
 void Produce::generate_random_tile()
 {
-	//srand(time(0));
+	srand(time(0));
 	int amount = (rand() % 2 + 1);
 	int empty = 0;
 	int place[2];
@@ -34,6 +34,9 @@ void Produce::generate_random_tile()
 			if (board[i][j] == 0) empty++;
 		}
 	}
+	if (empty == 1)
+		amount = 1;
+
 	if (amount == 1) {
 		place[0] = -1;
 		place[1] = (rand() % empty);
