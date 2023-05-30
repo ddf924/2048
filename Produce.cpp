@@ -39,7 +39,12 @@ void Produce::generate_random_tile()
 
 	if (amount == 1) {
 		place[0] = -1;
-		place[1] = (rand() % empty);
+		place[1] = 0;
+		for (int i = 0;i < 1;i++) {
+			for (int j = 0;j < 1;j++) {
+				if (board[i][j] == 0) place[1] = 4 * i + j;
+			}
+		}
 	}
 	else {
 		place[0] = (rand() % empty);

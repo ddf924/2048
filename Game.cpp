@@ -210,5 +210,6 @@ bool Game::isGameOver() {
 			}
 		}
 	}
+	A.print_board();
 	return true; // 沒有空格子且沒有相鄰且相同的方塊，遊戲結束
 }
