@@ -3,6 +3,7 @@
 #include<cstdlib>
 #include<ctime>
 
+
 using namespace std;
 #ifndef R_H
 #define R_H
@@ -11,9 +12,9 @@ class Produce
 {
 public:
 	int board[4][4];
-	Produce();//ªì©l¤Æ¹CÀ¸­±ªO
-	void generate_random_tile();//ÀH¾÷²£¥Í¤è¶ô
-	void print_board();//¦L¥Xªì©lµe­±¡B§ó·s«áµe­±
+	Produce();//åˆå§‹åŒ–éŠæˆ²é¢æ¿
+	void generate_random_tile();//éš¨æ©Ÿç”¢ç”Ÿæ–¹å¡Š
+	void print_board();//å°å‡ºåˆå§‹ç•«é¢ã€æ›´æ–°å¾Œç•«é¢
 };
 
 #endif
