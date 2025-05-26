@@ -3,7 +3,6 @@
 #include<cstdlib>
 #include<ctime>
 
-
 using namespace std;
 #ifndef R_H
 #define R_H
