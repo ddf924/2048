@@ -9,7 +9,6 @@ class Game
 private:
 	void shiftLeft();
 	void mergeLeft();
-
 	void moveLeft();
 	void shiftRight();
 	void mergeRight();
