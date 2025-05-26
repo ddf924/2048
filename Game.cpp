@@ -52,38 +52,17 @@ void Game::play() {
 		cout << "-----------------------------\n";
 
 		for (int i = 0;i < 7;i++) {
-			if (i == 4)
-				cout << "|          遊戲結束          |\n";
+			if (i == 3)
+				cout << "|         遊戲結束          |\n";
 			else
-				cout << "|                            |\n";
+				cout << "|                           |\n";
 		}
 		cout << "-----------------------------\n";
 	}
 
 
 }
-/*void Game::print_board() {
-	cout << "\n2048\n";
-	cout << "-----------------------------\n";
-	for (int i = 0; i < 4; i++) {
-		for (int j = 0; j < 4; j++) {
-			cout << "| " << board[i][j] << " ";
-		}
-		cout << "|\n";
-		cout << "-----------------------------\n";
-	}
-}
-void Game::generate_random_tile() {
-	//srand(time(0)); // 設定亂數種子
-	int val = (rand() % 2 + 1); // 隨機產生2或4
-	int row, col;
-	do {
-		row = rand() % 4;
-		col = rand() % 4;
-	} while (board[row][col] != 0); // 找到一個空格子
-	board[row][col] = val;
-}
-*/
+
 void Game::shiftLeft() {
 	for (int i = 0;i < 4;i++) {
 		int k = 0;
