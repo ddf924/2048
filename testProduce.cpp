@@ -11,5 +11,3 @@ int main() {
 		cout << endl;
 	}
 }
-
-
