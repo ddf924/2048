@@ -5,6 +5,7 @@ using namespace std;
 Game::Game(Produce A) {
 	this->A = A;
 }
+
 void Game::play() {
 	char ch;
 	for (;;) {
@@ -12,9 +13,9 @@ void Game::play() {
 
 		for (int i = 0;i < 7;i++) {
 			if (i == 3)
-				cout << "|          ¹CÀ¸¶}©l         |\n";
+				cout << "|          éŠæˆ²é–‹å§‹         |\n";
 			else if (i == 4)
-				cout << "|       ¡]«öªÅ®æÄ~Äò¡^      |\n";
+				cout << "|       ï¼ˆæŒ‰ç©ºæ ¼ç¹¼çºŒï¼‰      |\n";
 			else
 				cout << "|                           |\n";
 		}
@@ -53,7 +54,7 @@ void Game::play() {
 
 		for (int i = 0;i < 7;i++) {
 			if (i == 3)
-				cout << "|         ¹CÀ¸µ²§ô          |\n";
+				cout << "|         éŠæˆ²çµæŸ          |\n";
 			else
 				cout << "|                           |\n";
 		}
@@ -68,11 +69,11 @@ void Game::shiftLeft() {
 		int k = 0;
 		for (int j = 0;j < 4;j++) {
 			if (A.board[i][j] != 0) {
-				A.board[i][k++] = A.board[i][j]; //«D0¤è¶ô¦V¥ª²¾
+				A.board[i][k++] = A.board[i][j]; //é0æ–¹å¡Šå‘å·¦ç§»
 			}
 		}
 		while (k < 4) {
-			A.board[i][k++] = 0;//³Ñ¾l¤è¶ô¸É0
+			A.board[i][k++] = 0;//å‰©é¤˜æ–¹å¡Šè£œ0
 		}
 	}
 }
@@ -80,7 +81,7 @@ void Game::mergeLeft() {
 	for (int i = 0;i < 4;i++) {
 		for (int j = 0;j < 4;j++) {
 			if (A.board[i][j] != 0 && A.board[i][j] == A.board[i][j + 1]) {
-				A.board[i][j] *= 2;//¤è¶ô¦X¨Ö
+				A.board[i][j] *= 2;//æ–¹å¡Šåˆä½µ
 				A.board[i][j + 1] = 0;
 			}
 		}
@@ -96,11 +97,11 @@ void Game::shiftRight() {
 		int k = 3;
 		for (int j = 3; j >= 0; j--) {
 			if (A.board[i][j] != 0) {
-				A.board[i][k--] = A.board[i][j]; //«D0¤è¶ô¦V¥k²¾
+				A.board[i][k--] = A.board[i][j]; //é0æ–¹å¡Šå‘å³ç§»
 			}
 		}
 		while (k >= 0) {
-			A.board[i][k--] = 0;//³Ñ¾l¤è¶ô¸É0
+			A.board[i][k--] = 0;//å‰©é¤˜æ–¹å¡Šè£œ0
 		}
 	}
 }
@@ -108,7 +109,7 @@ void Game::mergeRight() {
 	for (int i = 0;i < 4;i++) {
 		for (int j = 3;j > 0;j--) {
 			if (A.board[i][j] != 0 && A.board[i][j] == A.board[i][j - 1]) {
-				A.board[i][j] *= 2;//¤è¶ô¦X¨Ö
+				A.board[i][j] *= 2;//æ–¹å¡Šåˆä½µ
 				A.board[i][j - 1] = 0;
 			}
 		}
@@ -124,11 +125,11 @@ void Game::shiftUp() {
 		int k = 0;
 		for (int i = 0;i < 4;i++) {
 			if (A.board[i][j] != 0) {
-				A.board[k++][j] = A.board[i][j]; //«D0¤è¶ô¦V¤W²¾
+				A.board[k++][j] = A.board[i][j]; //é0æ–¹å¡Šå‘ä¸Šç§»
 			}
 		}
 		while (k < 4) {
-			A.board[k++][j] = 0;//³Ñ¾l¤è¶ô¸É0
+			A.board[k++][j] = 0;//å‰©é¤˜æ–¹å¡Šè£œ0
 		}
 	}
 }
@@ -136,7 +137,7 @@ void Game::mergeUp() {
 	for (int i = 0;i < 4;i++) {
 		for (int j = 0;j < 4;j++) {
 			if (A.board[i][j] != 0 && A.board[i][j] == A.board[i + 1][j]) {
-				A.board[i][j] *= 2;//¤è¶ô¦X¨Ö
+				A.board[i][j] *= 2;//æ–¹å¡Šåˆä½µ
 				A.board[i + 1][j] = 0;
 			}
 		}
@@ -152,11 +153,11 @@ void Game::shiftDown() {
 		int k = 3;
 		for (int i = 3;i >= 0;i--) {
 			if (A.board[i][j] != 0) {
-				A.board[k--][j] = A.board[i][j]; //«D0¤è¶ô¦V¤U²¾
+				A.board[k--][j] = A.board[i][j]; //é0æ–¹å¡Šå‘ä¸‹ç§»
 			}
 		}
 		while (k >= 0) {
-			A.board[k--][j] = 0;//³Ñ¾l¤è¶ô¸É0
+			A.board[k--][j] = 0;//å‰©é¤˜æ–¹å¡Šè£œ0
 		}
 	}
 }
@@ -164,7 +165,7 @@ void Game::mergeDown() {
 	for (int j = 0; j < 4; j++) {
 		for (int i = 3; i > 0; i--) {
 			if (A.board[i][j] != 0 && A.board[i][j] == A.board[i - 1][j]) {
-				A.board[i][j] *= 2; // ¬Û¦P¤è¶ô¦X¨Ö
+				A.board[i][j] *= 2; // ç›¸åŒæ–¹å¡Šåˆä½µ
 				A.board[i - 1][j] = 0;
 			}
 		}
@@ -179,16 +180,16 @@ bool Game::isGameOver() {
 	for (int i = 0; i < 4; i++) {
 		for (int j = 0; j < 4; j++) {
 			if (A.board[i][j] == 0) {
-				return false; // ÁÙ¦³ªÅ®æ¤l¡A¹CÀ¸¥¼µ²§ô
+				return false; // é‚„æœ‰ç©ºæ ¼å­ï¼ŒéŠæˆ²æœªçµæŸ
 			}
 			if (i > 0 && A.board[i][j] == A.board[i - 1][j]) {
-				return false; // ÁÙ¦³¬Û¾F¥B¬Û¦Pªº¤è¶ô¡A¹CÀ¸¥¼µ²§ô
+				return false; // é‚„æœ‰ç›¸é„°ä¸”ç›¸åŒçš„æ–¹å¡Šï¼ŒéŠæˆ²æœªçµæŸ
 			}
 			if (j > 0 && A.board[i][j] == A.board[i][j - 1]) {
-				return false; // ÁÙ¦³¬Û¾F¥B¬Û¦Pªº¤è¶ô¡A¹CÀ¸¥¼µ²§ô
+				return false; // é‚„æœ‰ç›¸é„°ä¸”ç›¸åŒçš„æ–¹å¡Šï¼ŒéŠæˆ²æœªçµæŸ
 			}
 		}
 	}
 	A.print_board();
-	return true; // ¨S¦³ªÅ®æ¤l¥B¨S¦³¬Û¾F¥B¬Û¦Pªº¤è¶ô¡A¹CÀ¸µ²§ô
+	return true; // æ²’æœ‰ç©ºæ ¼å­ä¸”æ²’æœ‰ç›¸é„°ä¸”ç›¸åŒçš„æ–¹å¡Šï¼ŒéŠæˆ²çµæŸ
 }
