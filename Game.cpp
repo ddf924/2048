@@ -5,7 +5,6 @@ using namespace std;
 Game::Game(Produce A) {
 	this->A = A;
 }
-
 void Game::play() {
 	char ch;
 	for (;;) {
